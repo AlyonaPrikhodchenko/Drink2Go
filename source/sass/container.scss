@@ -1,0 +1,16 @@
+.container {
+  width: 87.5%;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet) {
+  .container {
+    width: 94.79%;
+  }
+}
+
+@media (min-width: $desktop) {
+  .container {
+    width: 94.44%;
+  }
+}
