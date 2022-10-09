@@ -1,0 +1,138 @@
+.features {
+  padding: 50px 0 60px;
+}
+
+.features__new {
+  margin-bottom: 4px;
+}
+
+.features__title {
+  margin-bottom: 36px;
+}
+
+.features__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  row-gap: 32px;
+}
+
+.features__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 66px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 50px;
+    height: 56px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--speed::before {
+    background-image: url("../img/icon/features-speed.svg");
+  }
+
+  &--convenience::before {
+    background-image: url("../img/icon/features-conveniece.svg");
+  }
+
+  &--energy::before {
+    background-image: url("../img/icon/features-energy.svg");
+  }
+
+  &--ecology::before {
+    background-image: url("../img/icon/features-ecology.svg");
+  }
+}
+
+.features__item-title {
+  margin: 0;
+  margin-bottom: 4px;
+
+  @include fontMontserrat(700, 18px, 32px, $color-base-black);
+}
+
+.features__item-description {
+  margin: 0;
+  text-align: center;
+
+  @include fontMontserrat(400, 14px, 20px, $color-base-black);
+}
+
+@media (min-width: $tablet) {
+  .features {
+    padding: 60px 0 100px;
+  }
+
+  .features__title {
+    margin-bottom: 60px;
+  }
+
+  .features__list {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+    column-gap: 30px;
+  }
+
+  .features__item {
+    align-items: start;
+    padding-top: 0;
+    padding-left: 76px;
+
+    &::before {
+      left: 0;
+      transform: translate(0);
+    }
+  }
+
+  .features__item-title {
+    margin-bottom: 10px;
+
+    @include fontMontserrat(700, 24px, 36px, $color-base-black);
+  }
+
+  .features__item-description {
+    text-align: left;
+
+    @include fontMontserrat(400, 16px, 24px, $color-base-black);
+  }
+}
+
+@media (min-width: $desktop) {
+  .features {
+    padding: 100px 0 96px;
+  }
+
+  .features__title {
+    margin-bottom: 80px;
+  }
+
+  .features__list {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
+  }
+
+  .features__item {
+    align-items: center;
+    padding-left: 0;
+    padding-top: 76px;
+
+    &::before {
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+
+  .features__item-description {
+    text-align: center;
+  }
+}

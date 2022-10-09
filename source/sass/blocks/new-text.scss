@@ -1,0 +1,8 @@
+.new-text {
+  display: block;
+  text-align: center;
+
+  @include fontMontserrat(700, 12px, 16px, $color-base-primary);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}

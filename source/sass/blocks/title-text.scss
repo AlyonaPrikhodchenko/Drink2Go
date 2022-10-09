@@ -1,0 +1,12 @@
+.title-text {
+  margin: 0;
+
+  @include fontMontserrat(700, 24px, 36px, $color-base-black);
+  text-align: center;
+}
+
+@media (min-width: $tablet) {
+  .title-text {
+    @include fontMontserrat(700, 42px, 64px, $color-base-black);
+  }
+}

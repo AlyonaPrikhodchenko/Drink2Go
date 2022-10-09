@@ -1,0 +1,12 @@
+.header {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+}
+
+@media (min-width: $tablet) {
+  .header {
+    grid-template-columns: repeat(3, auto);
+  }
+}

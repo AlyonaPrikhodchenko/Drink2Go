@@ -1,0 +1,45 @@
+.logo {
+  margin-left: 20px;
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.logo__text {
+  display: none;
+}
+
+@media (min-width: $tablet) {
+  .logo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-right: 67px;
+  }
+
+  .logo__image {
+    width: 82px;
+    height: 36px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-right: 162px;
+    margin-left: 40px;
+  }
+
+  .logo__image {
+    width: 170px;
+    height: 36px;
+    margin-right: 20px;
+  }
+
+  .logo__text {
+    display: block;
+    width: 130px;
+    margin: 0;
+
+    @include fontMontserrat(400, 12px, 16px, #333333);
+  }
+}
