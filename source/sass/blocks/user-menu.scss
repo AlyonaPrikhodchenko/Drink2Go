@@ -13,6 +13,10 @@
   height: 60px;
   padding: 0;
   text-decoration: none;
+
+  &:active {
+    background-color: $color-base-secondary;
+  }
 }
 
 .user-menu__link-text {
@@ -66,6 +70,10 @@
   &--nojs {
     display: none;
   }
+
+  &:active {
+    background-color: $color-base-secondary;
+  }
 }
 
 @media (min-width: $tablet) {
@@ -94,6 +102,29 @@
 
   .user-menu__link {
     width: 112px;
+
+    &:focus-visible {
+      outline: 1px solid $color-base-primary;
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      & svg {
+        fill: $color-base-primary;
+      }
+
+      & > .user-menu__link-text {
+        color: $color-base-primary;
+      }
+    }
+
+    &:active {
+      background-color: $color-base-secondary;
+
+      & > .user-menu__link-text {
+        color: $color-base-primary;
+      }
+    }
   }
 
 

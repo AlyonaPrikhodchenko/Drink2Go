@@ -16,9 +16,15 @@
   margin-bottom: 36px;
 }
 
+.catalog__select-wrapper {
+  margin: 0 0 20px auto;
+}
+
 .catalog__select-label {
-  display: block;
-  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+
+  @include fontMontserrat(600, 16px, 24px, $color-base-black);
 }
 
 .catalog__content {
@@ -42,6 +48,10 @@
   padding: 40px 20px 20px 20px;
   background-color: $color-base-white;
   border-radius: 4px;
+
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  }
 }
 
 .catalog__link-card {

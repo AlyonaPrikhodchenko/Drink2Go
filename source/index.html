@@ -20,7 +20,9 @@
   <link rel="preload" href="./fonts/Montserrat-Bold.woff" type="font/woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/Montserrat-ExtraBold.woff" type="font/woff" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin="">
   <link rel="stylesheet" href="./css/style.min.css">
 </head>
 
@@ -28,7 +30,7 @@
 
   <header class="page__header header">
     <div class="header__logo logo">
-      <a href="#" class="logo__link">
+      <a class="logo__link">
         <picture>
           <source media="(min-width: 1440px)" srcset="./img/content/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="./img/content/logo-tablet.svg">
@@ -42,7 +44,7 @@
     <ul class="header__user-menu user-menu reset-list">
       <li class="user-menu__item">
         <a href="#" class="user-menu__link">
-          <svg class="user-menu__icon" width="16" height="16" role="img" aria-hidden="true" focusable="false">
+          <svg class="user-menu__icon" width="16" height="16" fill="#333333" role="img" aria-hidden="true" focusable="false">
             <use xlink:href="./img/sprite.svg#user"></use>
           </svg>
           <span class="user-menu__link-text">Войти</span>
@@ -50,7 +52,7 @@
       </li>
       <li class="user-menu__item">
         <a href="#" class="user-menu__link">
-          <svg class="user-menu__icon" width="16" height="16" role="img" aria-hidden="true" focusable="false">
+          <svg class="user-menu__icon" width="16" height="16" fill="#333333" role="img" aria-hidden="true" focusable="false">
             <use xlink:href="./img/sprite.svg#basket"></use>
           </svg>
           <span class="user-menu__link-text">Корзина</span>
@@ -83,6 +85,7 @@
   </header>
 
   <main class="page__main main">
+    <h1 class="visually-hidden">Магазин кофейных напитков Drink2Go.</h1>
     <section class="main__slider swiper">
       <h2 class="visually-hidden">Слайдер</h2>
       <ul class="swiper__wrapper swiper-wrapper reset-list">
@@ -257,7 +260,7 @@
                     <span class="filter__value">Только растительное</span>
                   </label>
                   <label class="filter__label">
-                    <input class="filter__input visually-hidden" type="radio" name="milk" value="without" disabled>
+                    <input class="filter__input visually-hidden" type="radio" name="milk" value="without" checked disabled>
                     <span class="filter__mark"></span>
                     <span class="filter__value">Без молока</span>
                   </label>
@@ -303,23 +306,23 @@
           </form>
 
           <div class="catalog__list-wrapper">
-            <label class="catalog__select-label">
-              <span class="catalog__select-name">Сортировка</span>
-              <select class="catalog__select">
-                <option value="1">по умолчанию</option>
-                <option value="2">сначала дорогие</option>
-                <option value="3">сначала дешевые</option>
-                <option value="3">высокий рейтинг</option>
-              </select>
-            </label>
+            <div class="catalog__select-wrapper">
+              <div class="catalog__select-label">
+                <span class="catalog__select-name">Coртировка:</span>
+                <div id="select" class="catalog__select"></div>
+              </div>
+            </div>
 
             <ul class="catalog__list reset-list">
               <li class="catalog__item">
                 <a href="#" class="catalog__link-card">
                   <div class="catalog__picture">
                     <picture>
-                      <source type="image/webp" srcset="./img/content/coffee-can-1.webp 1x, ./img/content/coffee-can-1@2x.webp 2x">
-                      <img class="catalog__image" src="./img/content/coffee-can-1.png" srcset="./img/content/coffee-can-1@2x.png 2x" loading="lazy" width="130" height="188" alt="Декаф Флэт Уайт.">
+                      <source type="image/webp"
+                        srcset="./img/content/coffee-can-1.webp 1x, ./img/content/coffee-can-1@2x.webp 2x">
+                      <img class="catalog__image" src="./img/content/coffee-can-1.png"
+                        srcset="./img/content/coffee-can-1@2x.png 2x" loading="lazy" width="130" height="188"
+                        alt="Декаф Флэт Уайт.">
                     </picture>
                   </div>
                   <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
@@ -335,8 +338,11 @@
                 <a href="#" class="catalog__link-card">
                   <div class="catalog__picture">
                     <picture>
-                      <source type="image/webp" srcset="./img/content/coffee-can-2.webp 1x, ./img/content/coffee-can-2@2x.webp 2x">
-                      <img class="catalog__image" src="./img/content/coffee-can-2.png" srcset="./img/content/coffee-can-2@2x.png 2x" loading="lazy" width="130" height="188" alt="Декаф Флэт Уайт.">
+                      <source type="image/webp"
+                        srcset="./img/content/coffee-can-2.webp 1x, ./img/content/coffee-can-2@2x.webp 2x">
+                      <img class="catalog__image" src="./img/content/coffee-can-2.png"
+                        srcset="./img/content/coffee-can-2@2x.png 2x" loading="lazy" width="130" height="188"
+                        alt="Декаф Флэт Уайт.">
                     </picture>
                   </div>
                   <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
@@ -352,8 +358,11 @@
                 <a href="#" class="catalog__link-card">
                   <div class="catalog__picture">
                     <picture>
-                      <source type="image/webp" srcset="./img/content/coffee-can-3.webp 1x, ./img/content/coffee-can-3@2x.webp 2x">
-                      <img class="catalog__image" src="./img/content/coffee-can-3.png" srcset="./img/content/coffee-can-3@2x.png 2x" loading="lazy" width="130" height="188" alt="Декаф Флэт Уайт.">
+                      <source type="image/webp"
+                        srcset="./img/content/coffee-can-3.webp 1x, ./img/content/coffee-can-3@2x.webp 2x">
+                      <img class="catalog__image" src="./img/content/coffee-can-3.png"
+                        srcset="./img/content/coffee-can-3@2x.png 2x" loading="lazy" width="130" height="188"
+                        alt="Декаф Флэт Уайт.">
                     </picture>
                   </div>
                   <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
@@ -369,8 +378,11 @@
                 <a href="#" class="catalog__link-card">
                   <div class="catalog__picture">
                     <picture>
-                      <source type="image/webp" srcset="./img/content/coffee-can-4.webp 1x, ./img/content/coffee-can-4@2x.webp 2x">
-                      <img class="catalog__image" src="./img/content/coffee-can-4.png" srcset="./img/content/coffee-can-4@2x.png 2x" loading="lazy" width="130" height="188" alt="Декаф Флэт Уайт.">
+                      <source type="image/webp"
+                        srcset="./img/content/coffee-can-4.webp 1x, ./img/content/coffee-can-4@2x.webp 2x">
+                      <img class="catalog__image" src="./img/content/coffee-can-4.png"
+                        srcset="./img/content/coffee-can-4@2x.png 2x" loading="lazy" width="130" height="188"
+                        alt="Декаф Флэт Уайт.">
                     </picture>
                   </div>
                   <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
@@ -386,8 +398,11 @@
                 <a href="#" class="catalog__link-card">
                   <div class="catalog__picture">
                     <picture>
-                      <source type="image/webp" srcset="./img/content/coffee-can-5.webp 1x, ./img/content/coffee-can-5@2x.webp 2x">
-                      <img class="catalog__image" src="./img/content/coffee-can-5.png" srcset="./img/content/coffee-can-5@2x.png 2x" loading="lazy" width="130" height="188" alt="Декаф Флэт Уайт.">
+                      <source type="image/webp"
+                        srcset="./img/content/coffee-can-5.webp 1x, ./img/content/coffee-can-5@2x.webp 2x">
+                      <img class="catalog__image" src="./img/content/coffee-can-5.png"
+                        srcset="./img/content/coffee-can-5@2x.png 2x" loading="lazy" width="130" height="188"
+                        alt="Декаф Флэт Уайт.">
                     </picture>
                   </div>
                   <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
@@ -403,8 +418,11 @@
                 <a href="#" class="catalog__link-card">
                   <div class="catalog__picture">
                     <picture>
-                      <source type="image/webp" srcset="./img/content/coffee-can-6.webp 1x, ./img/content/coffee-can-6@2x.webp 2x">
-                      <img class="catalog__image" src="./img/content/coffee-can-6.png" srcset="./img/content/coffee-can-6@2x.png 2x" loading="lazy" width="130" height="188" alt="Декаф Флэт Уайт.">
+                      <source type="image/webp"
+                        srcset="./img/content/coffee-can-6.webp 1x, ./img/content/coffee-can-6@2x.webp 2x">
+                      <img class="catalog__image" src="./img/content/coffee-can-6.png"
+                        srcset="./img/content/coffee-can-6@2x.png 2x" loading="lazy" width="130" height="188"
+                        alt="Декаф Флэт Уайт.">
                     </picture>
                   </div>
                   <h3 class="catalog__item-title">Декаф Флэт Уайт</h3>
@@ -435,7 +453,6 @@
             <li class="pagination__item">
               <a class="pagination__link" href="#">3</a>
             </li>
-            </li>
           </ul>
           <a class="pagination__link-button pagination__link-button--next" href="#">
             <span class="visually-hidden">Следующая страница.</span>
@@ -446,30 +463,134 @@
     </section>
 
     <section class="main__map map">
+      <h2 class="visually-hidden">Раздел с картой.</h2>
       <div class="map__canvas" id="map-canvas">
         <div class="map__picture">
           <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="./img/content/map-desktop.webp 1x, ./img/content/map-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 768px)" srcset="./img/content/map-tablet.webp 1x, ./img/content/map-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="./img/content/map-desktop.webp 1x, ./img/content/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="./img/content/map-tablet.webp 1x, ./img/content/map-tablet@2x.webp 2x">
             <source type="image/webp" srcset="./img/content/map.webp 1x, ./img/content/map@2x.webp 2x">
 
-            <source media="(min-width: 1440px)" srcset="./img/content/map-desktop.png 1x, ./img/content/map-desktop@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="./img/content/map-tablet.png 1x, ./img/content/map-tablet@2x.png 2x">
-            <img class="map__image" src="./img/content/map.png" srcset="./img/content/map@2x.png 2x" loading="lazy" width="320" height="420" alt="Мы на карте.Санкт-Петербург, набережная реки Карповки, дом 5.">
+            <source media="(min-width: 1440px)"
+              srcset="./img/content/map-desktop.png 1x, ./img/content/map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)"
+              srcset="./img/content/map-tablet.png 1x, ./img/content/map-tablet@2x.png 2x">
+            <img class="map__image" src="./img/content/map.png" srcset="./img/content/map@2x.png 2x" loading="lazy"
+              width="320" height="420" alt="Мы на карте.Санкт-Петербург, набережная реки Карповки, дом 5.">
           </picture>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    footer
+  <footer class="page__footer footer">
+    <div class="footer__wrapper">
+      <div class="footer__container footer__container--social">
+        <div class="footer__logo logo">
+          <a class="logo__link">
+            <picture>
+              <source media="(min-width: 768px)" srcset="./img/content/logo-desktop.svg">
+              <img class="logo__image logo__image--footer" src="./img/content/logo-tablet.svg" loading="lazy" width="32"
+                height="36" alt="Интернет-магазин кофейных напитков Drink2Go.">
+            </picture>
+          </a>
+          <p class="logo__text logo__text--footer">Интернет-магазин кофейных напитков</p>
+        </div>
+
+        <ul class="footer__list footer__list--social reset-list">
+          <li class="footer__item">
+            <a href="#" class="footer__link footer__link--social" target="_blank">
+              <svg class="footer__icon" width="20" height="20" fill="#bdbdbd" role="img" aria-hidden="true" focusable="false">
+                <use xlink:href="./img/sprite.svg#vk"></use>
+              </svg>
+              <span class="visually-hidden">Перейти на нашу группу ВК.</span>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link footer__link--social" target="_blank">
+              <svg class="footer__icon" width="22" height="22" fill="#bdbdbd" role="img" aria-hidden="true" focusable="false">
+                <use xlink:href="./img/sprite.svg#pinterest"></use>
+              </svg>
+              <span class="visually-hidden">Перейти на нашу страница Pinterest.</span>
+            </a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link footer__link--social" target="_blank">
+              <svg class="footer__icon" width="20" height="20" fill="#bdbdbd" role="img" aria-hidden="true" focusable="false">
+                <use xlink:href="./img/sprite.svg#ok"></use>
+              </svg>
+              <span class="visually-hidden">Перейти на нашу группу ОК.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__wrapper">
+      <div class="footer__container">
+        <h4 class="footer__title">Интернет-магазин</h4>
+        <ul class="footer__list reset-list">
+          <li class="footer__item">
+            <a href="#" class="footer__link">Каталог</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Доставка</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Способы оплаты</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">О нас</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__wrapper">
+      <div class="footer__container">
+        <h4 class="footer__title">Медиа</h4>
+        <ul class="footer__list reset-list">
+          <li class="footer__item">
+            <a href="#" class="footer__link">Блог</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Информация для СМИ</a>
+          </li>
+          <li class="footer__item">
+            <a href="#" class="footer__link">Правовая информация</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__wrapper">
+      <div class="footer__container">
+        <h4 class="footer__title">Контакты</h4>
+        <address class="footer__address">Санкт-Петербург, набережная реки Карповки, дом 5</address>
+        <a href="tel:+79999999999" class="footer__tel">+7 (999) 999-99-99</a>
+      </div>
+    </div>
+
+    <div class="footer__wrapper footer__wrapper--academy">
+      <div class="footer__container footer__container--academy">
+        <a href="#" class="footer__link footer__link--academy">
+          <span class="footer__text-academy">
+            Разработано в HTML Academy
+          </span>
+          <svg class="footer__icon" width="12" height="16" fill="#bdbdbd" role="img" aria-hidden="true" focusable="false">
+            <use xlink:href="./img/sprite.svg#logo-academy"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-  crossorigin=""></script>
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
   <script src="./js/script.js" type="module"></script>
 </body>
 

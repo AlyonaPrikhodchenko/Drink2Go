@@ -1,0 +1,112 @@
+.select {
+  position: relative;
+  z-index: 100;
+
+  &.open .select__dropdown {
+    display: block;
+  }
+
+  &.open .select__backdrop {
+    display: block;
+  }
+
+  &.open .select__input::after {
+    transform: rotate(-45deg);
+  }
+
+  &.open .select__input::before {
+    transform: rotate(45deg);
+  }
+}
+
+.select__input {
+  position: relative;
+  width: auto;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  padding: 4px 30px 4px 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: transparent;
+
+  @include fontMontserrat(400, 16px, 24px, $color-base-primary);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 6px;
+    height: 2px;
+    background-color: $color-base-primary;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    right: 14px;
+    transform: rotate(45deg);
+  }
+
+  &:hover {
+    background-color: #f0ebff;
+  }
+}
+
+.select__dropdown {
+  display: none;
+  position: absolute;
+  top: auto;
+  right: 0;
+  max-height: 163px;
+  width: 190px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.select__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 190px;
+}
+
+.select__item {
+  width: 100%;
+  padding: 8px 10px 8px 10px;
+  border-bottom: 1px solid $color-base-secondary;
+  background-color: $color-base-white;
+
+  @include fontMontserrat(400, 16px, 24px, $color-base-black);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover {
+    background-color: $color-base-secondary;
+    cursor: pointer;
+    transition: 150ms;
+  }
+
+  &.selected {
+    background-color: $color-base-primary;
+    color: $color-base-white;
+  }
+}
+
+.select__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: transparent;
+  display: none;
+}
