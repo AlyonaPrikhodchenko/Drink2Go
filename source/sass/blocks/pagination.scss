@@ -1,0 +1,137 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination__link-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: $color-base-white;
+  text-decoration: none;
+  border-radius: 4px;
+
+  &::before {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%) rotate(-45deg);
+    content: "";
+    width: 6px;
+    height: 2px;
+    background-color: $color-base-primary;
+  }
+
+  &::after {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    content: "";
+    width: 6px;
+    height: 2px;
+    background-color: $color-base-primary;
+    transform: translate(-50%) rotate(45deg);
+  }
+
+  &--next {
+    &::before {
+      transform: translate(-50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%) rotate(-45deg);
+    }
+  }
+}
+
+.pagination__link-text {
+  display: none;
+}
+
+.pagination__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.pagination__item {
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.pagination__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: $color-base-white;
+  text-decoration: none;
+  border-radius: 4px;
+
+  @include fontMontserrat(400, 16px, 24px, $color-base-primary);
+
+  &--current {
+    background-color: transparent;
+    font-weight: 600;
+    color: $color-base-black;
+  }
+}
+
+
+@media (min-width: $tablet) {
+  .pagination {
+    justify-content: flex-end;
+  }
+
+  .pagination__list {
+    margin: 0;
+  }
+
+  .pagination__link-text {
+    display: block;
+
+    @include fontMontserrat(400, 14px, 24px, $color-base-primary);
+  }
+
+  .pagination__link-button {
+    width: 150px;
+
+    &--prev {
+      border-bottom-right-radius: 0%;
+      border-top-right-radius: 0%;
+    }
+
+    &--next {
+      border-bottom-left-radius: 0%;
+      border-top-left-radius: 0%;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .pagination__item {
+    &:first-child .pagination__link {
+      border-bottom-left-radius: 0%;
+      border-top-left-radius: 0%;
+    }
+
+    &:last-child .pagination__link {
+      border-bottom-right-radius: 0%;
+      border-top-right-radius: 0%;
+    }
+  }
+}

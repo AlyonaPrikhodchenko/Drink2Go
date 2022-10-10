@@ -200,7 +200,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet) {
   .filter__fieldset-wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -212,6 +212,10 @@
 
   .filter__fieldset {
     margin-bottom: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .filter__label {
@@ -240,5 +244,30 @@
       margin: 0;
       margin-right: 30px;
     }
+  }
+}
+
+@media (min-width: $desktop) {
+  .filter__fieldset-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 48px;
+  }
+
+  .filter__fieldset {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .filter__label {
+    &--range {
+      width: 134px;
+    }
+  }
+
+  .filter__button {
+    width: 150px;
+    font-size: 14px;
   }
 }
