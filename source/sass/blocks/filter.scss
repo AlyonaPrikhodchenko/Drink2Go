@@ -114,6 +114,11 @@
 }
 
 .filter__input {
+  &:focus-within + .filter__mark {
+    outline: 2px solid $color-base-primary;
+    outline-offset: 2px;
+  }
+
   &[type="radio"] + .filter__mark {
     border-radius: 50%;
 
@@ -179,6 +184,7 @@
     background-color: $color-base-white;
     border: 2px solid $color-primary-darker;
     border-radius: 4px;
+    appearance: textfield;
 
     @include fontMontserrat(500, 16px, 24px, $color-base-black);
     outline: none;
@@ -195,10 +201,12 @@
 
     &:focus-visible {
       border-color: $color-primary-lighter;
+      appearance: number-input;
     }
 
     &:hover {
       border-color: $color-primary-lighter;
+      appearance: number-input;
     }
 
     &:active {
@@ -247,10 +255,6 @@
   &--reset {
     color: $color-base-primary;
     background-color: $color-base-white;
-
-    &:focus-visible {
-      color: $color-base-white;
-    }
 
     &:hover {
       color: $color-base-white;

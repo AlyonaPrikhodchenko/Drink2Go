@@ -34,9 +34,9 @@
   border: none;
   background-color: transparent;
 
-  & > span,
-  & > span::before,
-  & > span::after {
+  & > .user-menu__burger-line,
+  & > .user-menu__burger-line::before,
+  & > .user-menu__burger-line::after {
     display: block;
     position: absolute;
     width: 16px;
@@ -44,17 +44,17 @@
     background-color: $color-base-black;
   }
 
-  & > span::before {
+  & > .user-menu__burger-line::before {
     content: "";
     top: -5px;
   }
 
-  & > span::after {
+  & > .user-menu__burger-line::after {
     content: "";
     top: 5px;
   }
 
-  &--close > span {
+  &--close > .user-menu__burger-line {
     background-color: transparent;
 
     &::before {

@@ -87,6 +87,11 @@
   &::after {
     font-size: 20px;
   }
+
+  &:focus-visible {
+    outline: 1px solid $color-base-primary;
+    outline-offset: 2px;
+  }
 }
 
 .swiper-button {
@@ -128,6 +133,11 @@
 
   &:hover {
     background-color: $color-base-secondary;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $color-base-primary;
+    outline-offset: 2px;
   }
 }
 
