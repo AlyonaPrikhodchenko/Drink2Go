@@ -118,14 +118,19 @@
     padding: 100px 0 120px;
   }
 
+  .features__container {
+    width: 94.5%;
+  }
+
   .features__title {
     margin-bottom: 82px;
     text-align: center;
   }
 
   .features__list {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 318px);
     column-gap: 30px;
+    justify-items: center;
   }
 
   .features__item {
