@@ -94,28 +94,26 @@
   }
 }
 
-.swiper-button {
-  &-prev {
-    left: 0;
-  }
+.swiper-button-prev {
+  left: 0;
 
-  &-next {
-    right: 0;
-  }
-
-  &-prev:hover {
+  &:hover {
     background: linear-gradient(90deg, $color-base-white 0%, rgba(255, 255, 255, 0) 100%);
   }
 
-  &-next:hover {
+  &:active {
+    background-image: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+}
+
+.swiper-button-next {
+  right: 0;
+
+  &:hover {
     background: linear-gradient(-90deg, $color-base-white 0%, rgba(255, 255, 255, 0) 100%);
   }
 
-  &-prev:active {
-    background-image: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
-  }
-
-  &-next:active {
+  &:active {
     background-image: linear-gradient(-90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
   }
 }
@@ -184,12 +182,14 @@
     width: 80px;
   }
 
-  .swiper-button {
-    &-prev::after {
+  .swiper-button-prev {
+    &::after {
       margin-bottom: 190px;
     }
+  }
 
-    &-next::after {
+  .swiper-button-next {
+    &::after {
       margin-bottom: 190px;
     }
   }
@@ -251,12 +251,14 @@
     bottom: 66px;
   }
 
-  .swiper-button {
-    &-prev::after {
+  .swiper-button-prev {
+    &::after {
       margin-bottom: 0;
     }
+  }
 
-    &-next::after {
+  .swiper-button-next {
+    &::after {
       margin-bottom: 0;
     }
   }

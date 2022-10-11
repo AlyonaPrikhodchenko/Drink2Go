@@ -114,11 +114,6 @@
 }
 
 .filter__input {
-  &:focus-within + .filter__mark {
-    outline: 2px solid $color-base-primary;
-    outline-offset: 2px;
-  }
-
   &[type="radio"] + .filter__mark {
     border-radius: 50%;
 
@@ -175,6 +170,11 @@
 
   &[type="checkbox"]:disabled + .filter__mark + .filter__value {
     opacity: 0.5;
+  }
+
+  &:focus-within + .filter__mark {
+    outline: 2px solid $color-base-primary;
+    outline-offset: 2px;
   }
 
   &--range {
@@ -311,8 +311,10 @@
     }
   }
 
-  .filter__inputs::before {
-    width: 6px;
+  .filter__inputs {
+    &::before {
+      width: 6px;
+    }
   }
 
   .filter__buttons {
