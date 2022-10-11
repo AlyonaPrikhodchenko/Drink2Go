@@ -57,6 +57,7 @@
 .features__item-title {
   margin: 0;
   margin-bottom: 4px;
+  text-align: center;
 
   @include fontMontserrat(700, 18px, 32px, $color-base-black);
 }
@@ -73,8 +74,12 @@
     padding: 60px 0 100px;
   }
 
+  .features__container {
+    width: 92.1%;
+  }
+
   .features__title {
-    margin-bottom: 60px;
+    margin-bottom: 62px;
   }
 
   .features__list {
@@ -86,7 +91,7 @@
   .features__item {
     align-items: start;
     padding-top: 0;
-    padding-left: 76px;
+    padding-left: 71px;
 
     &::before {
       left: 0;
@@ -109,11 +114,12 @@
 
 @media (min-width: $desktop) {
   .features {
-    padding: 100px 0 96px;
+    padding: 100px 0 120px;
   }
 
   .features__title {
-    margin-bottom: 80px;
+    margin-bottom: 82px;
+    text-align: center;
   }
 
   .features__list {

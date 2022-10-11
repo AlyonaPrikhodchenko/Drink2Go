@@ -5,8 +5,24 @@
   align-items: center;
 }
 
+.header__logo {
+  margin-left: 20px;
+}
+
 @media (min-width: $tablet) {
   .header {
     grid-template-columns: repeat(3, auto);
+  }
+
+  .header__logo {
+    margin-right: 38px;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: $desktop) {
+  .header__logo {
+    width: auto;
+    margin-right: 77px;
   }
 }

@@ -5,8 +5,8 @@ picturesMap.classList.add('.map__picture__hidden');
 const map = L.map('map-canvas');
 
 const coordsDefault = {
-  lat: '59.968289',
-  lng: '30.317438',
+  lat: '59.968322',
+  lng: '30.317359',
 };
 
 const mainPinIcon = L.icon({

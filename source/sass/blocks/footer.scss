@@ -18,6 +18,7 @@
 .footer__container {
   width: 87.5%;
   margin: 0 auto;
+  padding-bottom: 17px;
 
   &--social {
     display: flex;
@@ -28,6 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 0;
   }
 }
 
@@ -36,6 +38,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     width: 160px;
     margin-left: auto;
   }
@@ -51,13 +54,17 @@
   margin-bottom: 12px;
 
   @include fontMontserrat(700, 14px, 20px, $color-base-primary);
+
+  &--contacts {
+    margin-bottom: 20px;
+  }
 }
 
 .footer__link {
   display: flex;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 8px 0;
+  padding: 10px 0;
 
   @include fontMontserrat(500, 12px, 16px, $color-base-black);
 
@@ -100,8 +107,13 @@
 
   &--academy {
     text-transform: none;
+    padding: 0;
 
     @include fontMontserrat(400, 12px, 16px, $color-base-grey);
+
+    & > .footer__icon {
+      flex-shrink: 0;
+    }
 
     &:focus-visible {
       outline: 1px solid $color-base-primary;
@@ -184,9 +196,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 42px 0 40px;
-    width: 94.79%;
-    margin: 0 auto;
+    padding: 40px 0 40px;
   }
 
   .footer__wrapper {
@@ -196,38 +206,36 @@
 
     &:first-child {
       width: 100%;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
     &:last-child {
       width: 100%;
-      margin-top: 30px;
+      margin-top: 28px;
     }
   }
 
   .footer__container {
     width: 100%;
+    padding-bottom: 0;
   }
 }
 
 @media (min-width: $desktop) {
-  .footer {
-    width: 94.44%;
-  }
-
   .footer__wrapper {
     margin: 0;
+    margin-top: 10px;
     width: 318px;
 
     &:first-child {
       display: flex;
       flex-direction: column;
       width: 318px;
-      margin-bottom: 0;
+      margin: 0;
     }
 
     &:last-child {
-      margin-top: 20px;
+      margin-top: 18px;
     }
   }
 
@@ -245,7 +253,7 @@
     align-items: start;
     flex-direction: column;
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
   }
 
   .footer__list {
