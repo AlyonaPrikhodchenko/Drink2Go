@@ -172,7 +172,7 @@
     opacity: 0.5;
   }
 
-  &:focus-within + .filter__mark {
+  &:focus-visible + .filter__mark {
     outline: 2px solid $color-base-primary;
     outline-offset: 2px;
   }
